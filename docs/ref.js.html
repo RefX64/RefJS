@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ref.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="rj.html">rj</a><ul class='methods'><li data-type='method'><a href="rj.html#.executeCollectionOrSingleTask">executeCollectionOrSingleTask</a></li><li data-type='method'><a href="rj.html#.formatURLWithParam">formatURLWithParam</a></li><li data-type='method'><a href="rj.html#.generateFormDataFromObj">generateFormDataFromObj</a></li><li data-type='method'><a href="rj.html#.main">main</a></li><li data-type='method'><a href="rj.html#.main.AddEventListener">main.AddEventListener</a></li><li data-type='method'><a href="rj.html#.main.AddSelectListItem">main.AddSelectListItem</a></li><li data-type='method'><a href="rj.html#.main.AnimateFadeIn">main.AnimateFadeIn</a></li><li data-type='method'><a href="rj.html#.main.AnimateFadeOut">main.AnimateFadeOut</a></li><li data-type='method'><a href="rj.html#.main.AppendHTML">main.AppendHTML</a></li><li data-type='method'><a href="rj.html#.main.AsyncGet">main.AsyncGet</a></li><li data-type='method'><a href="rj.html#.main.AsyncGetJson">main.AsyncGetJson</a></li><li data-type='method'><a href="rj.html#.main.AsyncLoad">main.AsyncLoad</a></li><li data-type='method'><a href="rj.html#.main.AsyncPost">main.AsyncPost</a></li><li data-type='method'><a href="rj.html#.main.AsyncSubmitForm">main.AsyncSubmitForm</a></li><li data-type='method'><a href="rj.html#.main.ClearSelectList">main.ClearSelectList</a></li><li data-type='method'><a href="rj.html#.main.CommaFormat">main.CommaFormat</a></li><li data-type='method'><a href="rj.html#.main.DeleteSelctListItem">main.DeleteSelctListItem</a></li><li data-type='method'><a href="rj.html#.main.Empty">main.Empty</a></li><li data-type='method'><a href="rj.html#.main.FindChildren">main.FindChildren</a></li><li data-type='method'><a href="rj.html#.main.FindParent">main.FindParent</a></li><li data-type='method'><a href="rj.html#.main.ForEach">main.ForEach</a></li><li data-type='method'><a href="rj.html#.main.GetScrollTop">main.GetScrollTop</a></li><li data-type='method'><a href="rj.html#.main.GetType">main.GetType</a></li><li data-type='method'><a href="rj.html#.main.Id">main.Id</a></li><li data-type='method'><a href="rj.html#.main.InputFilterDecimal">main.InputFilterDecimal</a></li><li data-type='method'><a href="rj.html#.main.IsIEorEdge">main.IsIEorEdge</a></li><li data-type='method'><a href="rj.html#.main.IsNumeric">main.IsNumeric</a></li><li data-type='method'><a href="rj.html#.main.IsValidElement">main.IsValidElement</a></li><li data-type='method'><a href="rj.html#.main.IsValidValue">main.IsValidValue</a></li><li data-type='method'><a href="rj.html#.main.LoadJS">main.LoadJS</a></li><li data-type='method'><a href="rj.html#.main.MoveHTMLTo">main.MoveHTMLTo</a></li><li data-type='method'><a href="rj.html#.main.OnDocumentReady">main.OnDocumentReady</a></li><li data-type='method'><a href="rj.html#.main.PopulateSelectList">main.PopulateSelectList</a></li><li data-type='method'><a href="rj.html#.main.RemoveEventListener">main.RemoveEventListener</a></li><li data-type='method'><a href="rj.html#.main.ReplaceAll">main.ReplaceAll</a></li><li data-type='method'><a href="rj.html#.main.ScrollTo">main.ScrollTo</a></li><li data-type='method'><a href="rj.html#.main.SelectListContains">main.SelectListContains</a></li><li data-type='method'><a href="rj.html#.main.Show">main.Show</a></li><li data-type='method'><a href="rj.html#.main.StringContains">main.StringContains</a></li><li data-type='method'><a href="rj.html#.main.StringEquals">main.StringEquals</a></li><li data-type='method'><a href="rj.html#.main.StringFormat">main.StringFormat</a></li><li data-type='method'><a href="rj.html#.main.Throttle">main.Throttle</a></li><li data-type='method'><a href="rj.html#.main.ToggleShowHide">main.ToggleShowHide</a></li><li data-type='method'><a href="rj.html#.main.UnobtrusiveLoadPartial">main.UnobtrusiveLoadPartial</a></li><li data-type='method'><a href="rj.html#.main.UrlAction">main.UrlAction</a></li><li data-type='method'><a href="rj.html#.main.ValidateForm">main.ValidateForm</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">ref.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>﻿/*  RefJS: Replaces most commonly used jQuery functions. Written using C# Style.
+            Naming can throw some people off. A lot of them were based on C# types.
+            This is NOT a jQuery replacement. Functions names and stuff does not match.
+    Version: 0.6 Beta
+    License: MIT License
+    Website: https://github.com/Refdroid/RefJS
+*/
+
+/* ----------- Not Included/Easy Native solution already exist -----------
+___ CustomEvent - Need a custom library (polyfill) for older browsers.
+    var myEvent = new CustomEvent("myEvent"); -> obj/document.dispatchEvent(event); -> rj.AddEventListener('myEvent', '#obj'/'doc');
+
+___ Class Manipulation (classList) - Need a polyfill for this for older browsers.
+    (add, remove, has) -> obj.classList.add("myClass"), obj.classList.remove("myClass"), obj.classList.contains("myClass");
+------------------- END TIPS ----------------- */
+
+/**
+ * RefJS Library
+ * @example rj("#id") or rj.functionToCall(); 
+ * @class rj
+ */
+var rj = (function ()
+{
+    'use strict';
+
+    main.GlobalOptions = {
+        FetchCache: 'default' // no-store, reload, no-cache, force-cache 
+    };
+
+    /**
+     * &lt;pre>
+     *    Same as jQuery's $(selector). This one was tested faster on jsperf than jQuery 3.
+     *    Warning:
+     *    #1. Comma ',' without spaces will not work. For example rj('#id,#id2') wont work. However, rj('#id1, #id2') will.
+     *    #2. Better to use rj.Id instead when you're finding something by id. It's much faster.
+     * &lt;/pre>
+     * @memberOf rj
+     * @param {string} query E.g. '#Id', '.Class', 'p'
+     * @returns {object} The selected element(s).
+    */
+    function main(query)
+    {
+        var predictionID = query[0] === '#',
+            predictionClass = query[0] === '.',
+            predictionComplexQuery = query.indexOf(' ') !== -1 || query.indexOf('=') !== -1 || query.indexOf('[') !== -1 || (predictionID &amp;&amp; query.indexOf('.') !== -1),
+            predictionTag = !(predictionID || predictionClass || predictionComplexQuery);
+
+        return predictionComplexQuery ? (document.querySelectorAll(query))
+            : predictionID
+                ? document.getElementById(query.substring(1))
+                : predictionClass
+                    ? document.getElementsByClassName(query.substring(1))
+                    : predictionTag
+                        ? document.getElementsByTagName(query)
+                        : document.querySelectorAll(query);
+    }
+
+    /**
+     * Returns an element by id. 
+     * @memberOf rj
+     * @param {string} id id of the element you are looking for. 
+     */
+    main.Id = function (id) { return document.getElementById(id); }
+
+    //#region Events, Listeners
+
+    /**
+     * Execute functions when the document is ready. 
+     * @memberOf rj
+     * @param {function} func The function you would like to execute.
+     */
+    main.OnDocumentReady = function (func)
+    {
+        if (document.readyState === "complete") { func(); }
+        else { document.addEventListener("DOMContentLoaded", func); }
+    }
+
+    /**
+        Adds an event to the element or the document.
+        @memberOf rj
+        @example rj.AddEventListener('click', 'a[data-testclick]', function (e) { var message = e.target.getAttribute('data-message'); }
+        @param {string} eventType The type of events. E.g. 'click', 'change', etc.
+        @param {string} query E.g. '#Id', '.Class', 'p'
+        @param {function} func It should be function(e) {} 
+    */
+    main.AddEventListener = function (eventType, query, func)
+    {
+        var obj = getObjectOrExecuteQuery(query);
+        executeCollectionOrSingleTask(obj, function (item)
+        {
+            item.addEventListener(eventType, func);
+        });
+    }
+
+    /**
+        Removes an added function from the element or the document.
+        @memberOf rj
+        @param {string} eventType The type of events. E.g. 'click', 'change', etc.
+        @param {string} query E.g. '#Id', '.Class', 'p'
+        @param {function} func It should be function(e) {}
+     */
+    main.RemoveEventListener = function (query, eventType, func)
+    {
+        var obj = getObjectOrExecuteQuery(query);
+        executeCollectionOrSingleTask(obj, function (item)
+        {
+            item.removeEventListener(eventType, func);
+        });
+    }
+
+    //#endregion
+
+    //#region Ajax (Get, Post, Serialize, Validation)
+    // If none of these work for you, feel free to implement your own by using fetch or xhr. 
+    // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+    // P.S. All of these async are promise functions, so you can execute your own .then, .catch, and .finally once it's done.
+    
+    /**
+     * Loads an url into a target.
+     * @memberOf rj
+     * @example rj.AsyncLoad('targetId', '/LoadTarget', { id: '5' }).then(func(result)).catch(func(error)).finally(func);
+     * @param {string} target TargetId or you can also pass in an element. 
+     * @param {string} url The url to load
+     * @param {object} param the parameters to pass in
+     * @param {object} options see #RefJS_FetchOptions in finalRequest();
+     */
+    main.AsyncLoad = function (target, url, param, options)
+    {
+        return finalRequest(false, url, param, fillMissingAsyncOptions(options, false)).then(function (result)
+        {
+            var divObject = rj.IsObject(target) ? target : getObjBySanitizedID(target);
+            main.Empty(divObject);
+            divObject.innerHTML = result;
+
+            // Script fix. innerHTML=&lt;script> does not produce executable script. 
+            var divScripts = divObject.querySelectorAll("script");
+            main.ForEach(divScripts, function (scriptNode) { main.NodeScriptReload(scriptNode); });
+        }).catch(function (ex) { console.error(ex); });
+    }
+
+    /**
+     * Loads a url
+     * @memberOf rj
+     * @param {string} url The url to load
+     * @param {object} param the parameters to pass in
+     * @param {object} options see #RefJS_FetchOptions in finalRequest();
+     */
+    main.AsyncGet = function (url, param, options) { return finalRequest(false, url, param, fillMissingAsyncOptions(options, false)); }
+
+    /**
+     * Loads a url and expects the result to be JSON type.
+     * @memberOf rj
+     * @param {string} url The url to load
+     * @param {object} param the parameters to pass in
+     * @param {object} options see #RefJS_FetchOptions in finalRequest();
+     */
+    main.AsyncGetJson = function (url, param, options) { return finalRequest(false, url, param, fillMissingAsyncOptions(options, true)); }
+    
+    /**
+     * Posts data to a url
+     * @memberOf rj
+     * @param {string} url The url to load
+     * @param {object} data the parameters to pass in. Data must be Object -> { id: 10, username: 'test' } or FormData -> var data = new FormData(formObj)
+     * @param {object} options see #RefJS_FetchOptions in finalRequest();
+     */
+    main.AsyncPost = function (url, data, options) { return finalRequest(true, url, data, fillMissingAsyncOptions(options, false)); }
+
+    /**
+     * Submits a form along with all of its data. Needs URL from action tag.
+     * @memberOf rj
+     * @example &lt;form action="/urlToPostForm" id="formToPost">...&lt;/form> -> rj.SubmitForm('formToPost').then(...);
+     * @param {string} formId 
+     * @param {object} options
+     */
+    main.AsyncSubmitForm = function (formId, options)
+    {
+        var formObj = getObjBySanitizedID(formId);
+        var url = formObj.getAttribute("action");
+        var data = new FormData(formObj);
+
+        return finalRequest(true, url, data, fillMissingAsyncOptions(options, false));
+    }
+    
+    /**
+        The "sealed/final" function. Executes the AJAX/Fetch request.  All other Async calls depend on this.
+        @param {bool} isPost Is the request POST? If not, it's a GET
+        @param {string} url The url we are calling.
+        @param {object} param All the parameters. E.g. { p1: 'test', p2: 10 }
+        @param {object} options Fetch options to pass in. 
+        #RefJS_FetchOptions {
+            isJson: specifies if the return type is typeof json or not.
+            fetchCache: take a look at official fetch cache document for proper options.
+            fetchMode: take a look at official fetch mode document for proper options.
+        }
+    */
+    function finalRequest(isPost, url, data, options)
+    {
+        return new Promise(function (resolve, reject)
+        {
+            url = isPost ? url : formatURLWithParam(url, data);
+            if (isPost &amp;&amp; !main.IsFormData(data)) { data = generateFormDataFromObj(data); }
+
+            var request =
+                {
+                    method: isPost ? "POST" : "GET",
+                    body: isPost ? data : null,
+                    cache: options.fetchCache,
+                    mode: options.fetchMode,
+                    credentials: 'same-origin'
+                };
+
+            fetch(url, request).then(checkFetchStatus)
+                .then(function (response) { return options.isJson ? response.json() : response.text() })
+                .then(function (result)
+                {
+                    resolve(result);
+                }).catch(function (ex)
+                {
+                    console.error(ex);
+                    reject(ex);
+                });
+        });
+    }
+
+    function checkFetchStatus(response)
+    {
+        if (response.status >= 200 &amp;&amp; response.status &lt; 300)
+        {
+            return response;
+        }
+        else
+        {
+            var error = new Error(response.statusText);
+            error.response = response;
+            throw error;
+        }
+    }
+
+
+    function fillMissingAsyncOptions(options, forceJson)
+    {
+        if (options == null || !main.IsObject(options)) { options = {}; }
+
+        if (!main.IsValidValue(options.isJson)) { options.isJson = forceJson === true ? true : false; }
+        if (!main.IsValidValue(options.fetchCache)) { options.fetchCache = main.GlobalOptions.FetchCache; }
+        if (!main.IsValidValue(options.fetchMode)) { options.fetchMode = 'no-cors'; }
+
+        return options;
+    }
+    
+    /**
+     * Turns javascript object/class into URL Parameters format.
+     * @memberOf rj
+     * @param {object} object parameters object
+     * @returns {string} Example: { id: 10, username: "test" } -> id=10&amp;username=test
+     */
+    main.ToParamString = generateStringParam;
+    function generateStringParam(object)
+    {
+        var encodedString = '';
+        for (var prop in object)
+        {
+            if (object.hasOwnProperty(prop))
+            {
+                if (encodedString.length > 0) { encodedString += '&amp;'; }
+                encodedString += encodeURI(prop + '=' + object[prop]);
+            }
+        }
+        return encodedString;
+    }
+
+    /**
+     * Adds Parameters to an URL.
+     * @memberOf rj
+     * @param {string} url The url to combine the parameters with. Do you include "?" in the url.
+     * @param {object} param The param must be object. E.g. { id: 10, name: Test }
+     * @returns {string} The string format of: (url)?(param)
+     */
+    function formatURLWithParam(url, param)
+    {
+        if (param != null)
+        {
+            if (typeof param == 'string')
+            {
+                return encodeURI(url + "?" + param);
+            }
+            return encodeURI(url + "?" + generateStringParam(param));
+        }
+        return encodeURI(url);
+    }
+
+    /**
+     * Gemerate FormData from param object
+     * @memberOf rj
+     * @param {object} obj Param object. E.g. { id: 10, username: "Test" }
+     */
+    function generateFormDataFromObj(obj)
+    {
+        var formData = new FormData();
+        for (var key in obj)
+        {
+            if (obj.hasOwnProperty(key)) { formData.append(key, obj[key]); }
+        }
+        return formData;
+    }
+
+    //#endregion
+
+    //#region Javascript Unobtrusive Validation
+
+    /**
+     * Validates a form and makes sure that every input are in correct/expected format.
+     * @memberOf rj
+     * @example Warning: The form MUST have: "@Html.ValidationSummary()" or '&lt;div data-valmsg-summary="true">&lt;/div>'.
+     * @example if (rj.ValidateForm('formToValidateId')) { rj.AsyncSubmitForm('formToValidateId'); }
+     * @param {string} formId The form to validate. Pass in the form id. 
+     * @param {bool} markInvalidInputs Specify whether to mark EACH invalid input (if not, will only display the summary.)
+     * @returns {bool} true or false. Wether the form inputs are valid or not.  
+     */
+    main.ValidateForm = function (formId, markInvalidInputs)
+    {
+        formId = formId.replace('#', '');
+        if (markInvalidInputs == null || markInvalidInputs === 'undefined') { markInvalidInputs = true; }
+
+        var elements = document.querySelectorAll('#' + formId + ' [data-val="true"]');
+        if (elements.length &lt; 1) { return true; } // No Elements to validate
+
+        var errors = [],
+            container = document.querySelector('#' + formId + ' [data-valmsg-summary=true]');
+
+        function addError(errorMessage, elem, markInvalidInputs)
+        {
+            errors.push(errorMessage);
+            if (markInvalidInputs)
+            {
+                elem.classList.add('input-has-error');
+            }
+        }
+
+        main.ForEach(elements, function (elem)
+        {
+            // Remove previous error-mark (if any)
+            if (elem.classList.contains('input-has-error'))
+            {
+                elem.classList.remove('input-has-error');
+            }
+
+            var isRequired = elem.hasAttribute('data-val-required');
+            var hasValue = elem.value.length > 0;
+
+            // [Required]
+            if (isRequired)
+            {
+                if ((elem.value == null || elem.value.length &lt; 1) || elem.value.toLowerCase() === 'select')
+                {
+                    addError(elem.getAttribute('data-val-required'), elem, markInvalidInputs);
+                }
+            }
+
+            // [EmailAddress]
+            if (elem.hasAttribute('data-val-email'))
+            {
+                if ((isRequired || hasValue) &amp;&amp; !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$/.test(elem.value))
+                {
+                    addError(elem.getAttribute('data-val-email'), elem, markInvalidInputs);
+                }
+            }
+
+            // [StringLength]
+            if (elem.hasAttribute('data-val-length-min'))
+            {
+                var minStrLength = parseInt(elem.getAttribute('data-val-length-min'));
+                if ((isRequired || hasValue) &amp;&amp; elem.value.length &lt; minStrLength)
+                {
+                    addError(elem.getAttribute('data-val-length'), elem, markInvalidInputs);
+                }
+            }
+            if (elem.hasAttribute('data-val-length-max'))
+            {
+                var maxStrLength = parseInt(elem.getAttribute('data-val-length-max'));
+                if ((isRequired || hasValue) &amp;&amp; elem.value.length > maxStrLength)
+                {
+                    addError(elem.getAttribute('data-val-length'), elem, markInvalidInputs);
+                }
+            }
+
+            // [MinLength]
+            if (elem.hasAttribute('data-val-minlength-min'))
+            {
+                var minLength = parseInt(elem.getAttribute('data-val-minlength-min'));
+                if ((isRequired || hasValue) &amp;&amp; elem.value.length &lt; minLength)
+                {
+                    addError(elem.getAttribute('data-val-minlength'), elem, markInvalidInputs);
+                }
+            }
+
+            // [MaxLength]
+            if (elem.hasAttribute('data-val-maxlength-max'))
+            {
+                var maxLength = parseInt(elem.getAttribute('data-val-maxlength-max'));
+                if ((isRequired || hasValue) &amp;&amp; elem.value.length > maxLength)
+                {
+                    addError(elem.getAttribute('data-val-maxlength'), elem, markInvalidInputs);
+                }
+            }
+
+            // [DataType(Date)]
+            if (elem.getAttribute('type') === 'date')
+            {
+                if ((isRequired || hasValue) &amp;&amp; /Invalid|NaN/.test(new Date(elem.value).toString()))
+                {
+                    addError(elem.getAttribute('name') + ' must be a proper date value.', elem, markInvalidInputs);
+                }
+            }
+
+            // [DataType(Url)]
+            if (elem.getAttribute('type') === 'url')
+            {
+                if ((isRequired || hasValue) &amp;&amp;
+                    /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(elem.value))
+                {
+                    addError(elem.getAttribute('name') + ' must be a proper url value.', elem, markInvalidInputs);
+                }
+            }
+        });
+
+        if (container == null)
+        {
+            // No where to display error message, just return validation result.
+            console.info('Not displaying validation errors. [data-valmsg-summary] not found. Use @Html.ValidationSummary() on MVC.');
+            return errors.length &lt; 1;
+        }
+
+        var list = container.firstChild;
+
+        // Reset everything.
+        container.className = '';
+        main.Empty(list);
+
+        if (errors.length > 0)
+        {
+            container.classList.add('validation-summary-errors');
+            main.ForEach(errors, function (err)
+            {
+                list.innerHTML += '&lt;li>' + err + '&lt;/li>';
+            });
+            return false;
+        }
+        else
+        {
+            container.classList.add('validation-summary-valid');
+            return true;
+        }
+    }
+    //#endregion Ajax (Get, Post, Serialize, Validation)
+
+    //#region Miscellaneous
+
+    /**
+     * Executes the function once if the object is a single item, or multiple times if the object is a collection.
+     * @memberOf rj
+     * @param {object} obj the object(s) (single item or collection)
+     * @param {function} func the function to execute on the object. Must be function(obj). 
+     */
+    function executeCollectionOrSingleTask(obj, func)
+    {
+        if (main.IsArray(obj) || main.IsHTMLCollection(obj) || obj.constructor === NodeList) { main.ForEach(obj, func); }
+        else { func(obj); }
+    }
+
+    // If the passed in target is an object, returns the object. If not, treats the target as a query and finds the target. 
+    function getObjectOrExecuteQuery(target) { return main.IsObject(target) ? selector : main(target); }
+
+    // Assuming the query will be found by id. Clean it up incase users passes in '#id', instead of 'id'.
+    function getObjBySanitizedID(query)
+    {
+        query = query.replace("#", "");
+        return main.Id(query);
+    }
+
+    /**
+     * Checks if this is a proper function.
+     * @memberOf rj
+     * @param {function} functionToCheck the function to check if function.
+     */ 
+    main.IsFunction = isFunction;
+    function isFunction(functionToCheck)
+    {
+        var getType = {};
+        return functionToCheck &amp;&amp; getType.toString.call(functionToCheck) === '[object Function]';
+    }
+    
+
+    /**
+     * Gets the type of the object
+     * @memberOf rj
+     * @param {any} item The object to check
+     * @returns {string} The type of object in string format
+     */
+    main.GetType = function (item)
+    {
+        if (item == null) { return null; }
+        else if (main.IsObject(item)) { return Object.prototype.toString.call(item); } // returns "[object complexObject]"s
+        else { return typeof item; }
+    }
+
+    main.IsObject = function (item) { return typeof (item) == 'object'; }
+    main.IsFormData = function (item) { return (typeof FormData !== 'undefined') &amp;&amp; (item instanceof FormData); }
+    main.IsTypeOf = function (obj, typeName)
+    {
+        var objectType = main.GetType(obj);
+        if (objectType == null) { return false; }
+
+        return main.StringContains(objectType, typeName);
+    }
+    main.IsNullOrUndefined = function (obj) { return obj == null || obj == "undefined"; }
+
+    /**
+     * Check is the value is numbers only.
+     * @memberOf rj
+     * @param {string} val The value to check
+     */
+    main.IsNumeric = function (val)
+    {
+        var num = Number(val), type = typeof val;
+        return val != null &amp;&amp; type !== 'boolean' &amp;&amp; (type !== 'string' || val.length) &amp;&amp; !isNaN(num) &amp;&amp; isFinite(num) || false;
+    }
+
+    /**
+     * Basically a foreach function.
+     * @memberOf rj
+     * @example rj.ForEach(array, function(item) {...}) OR rj.ForEach(rj('p'), function(obj) { obj.style.backgroundColor = '#333'; });
+     * @param {object} arr The collection of items 
+     * @param {function} func The function to run on each collection items. 
+     */
+    main.ForEach = function (arr, func)
+    {
+        // TIP: if using native .forEach, Need IE9+. no stict mode in IE9. Does not support parseInt in few browsers, like older android. Visit Caniuse.com for more info.
+        if (arr === null || typeof arr === 'undefined') { return; }
+        if (typeof arr !== 'object' &amp;&amp; !main.IsArray(arr)) { arr = [arr]; } // If not an array, force it into an array.
+
+        for (var i = 0, len = arr.length; i &lt; len; i++) { func(arr[i]); }
+    }
+    
+    /**
+     * Completely empties out the inner html of chosen selectors. Tries to empty eventListeners as well.
+     * @memberOf rj
+     * @param {any} selector Object or a string to empty
+     */
+    main.Empty = function (selector)
+    {
+        var obj = main.IsObject(selector) ? selector : main(selector);
+        executeCollectionOrSingleTask(obj, function (item)
+        {
+            while (item.firstChild) { item.removeChild(item.firstChild); }
+        });
+    }
+
+    /**
+     * Scrolls to a specific location with animation.
+     * @memberOf rj
+     * @example For scrolling to specific location(non-animation), you could also use: window.scrollTo(x-coord, y-coord);
+     * @param {number} toElement
+     * @param {number} duration
+     */
+    main.ScrollTo = function (toElement, duration)
+    {
+        var scrollingElement = document.scrollingElement || document.documentElement;
+        var currentDoc = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+        if (!main.IsValidValue(duration)) { duration = 1250; }
+        var toPosition = (typeof (toElement) === "number") ? toElement : toElement.getBoundingClientRect().top;
+
+        var start = currentDoc,
+            change = toPosition - start,
+            increment = 20;
+
+        var animateScroll = function (elapsedTime)
+        {
+            elapsedTime += increment;
+            var position = easeInOut(elapsedTime, start, change, duration);
+            scrollingElement.scrollTop = position;
+            if (elapsedTime &lt; duration)
+            {
+                setTimeout(function ()
+                {
+                    animateScroll(elapsedTime);
+                }, increment);
+            }
+        };
+
+        animateScroll(0);
+    }
+
+    function easeInOut(currentTime, start, change, duration)
+    {
+        currentTime /= duration / 2;
+        if (currentTime &lt; 1)
+        {
+            return change / 2 * currentTime * currentTime + start;
+        }
+        currentTime -= 1;
+        return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
+    }
+
+    /**
+     * Gets the current browser scroll location
+     * @memberOf rj
+     */
+    main.GetScrollTop = function ()
+    {
+        if (typeof pageYOffset != 'undefined') { return pageYOffset; }
+        else
+        {
+            var B = document.body; //IE 'quirks'
+            var D = document.documentElement; //IE with doctype
+            D = (D.clientHeight) ? D : B;
+            return D.scrollTop;
+        }
+    }
+
+    /** 
+     * Appends html value to a selected location.
+     * @memberOf rj
+     * @example rj.AppendHTML('.class', '&lt;p>Test&lt;/p>', 'afterbegin') or leave position empty for default afterend
+     * @param {string} query The place to append the html value.
+     * @param {string} htmlValue The html value to append
+     * @param {string} position Position to append the htmlValue. (beforebegin)&lt;p>(afterbegin)foo(beforeend)&lt;/p>(afterend)
+     */
+    main.AppendHTML = function (query, htmlValue, position)
+    {
+        if (!main.IsValidValue(position)) { position = 'beforeend'; }
+        var obj = getObjectOrExecuteQuery(query);
+        executeCollectionOrSingleTask(obj, function (item)
+        {
+            item.insertAdjacentHTML(position, htmlValue);
+        });
+    }
+
+    /**
+     * Moves HTML from one location to another.
+     * @memberOf rj
+     * @param {string} sourceId The source id of the element to move
+     * @param {string} movingToSelector The location to move it to. You can specify an #id, or a .class
+     */
+    main.MoveHTMLTo = function (sourceId, movingToSelector)
+    {
+        var obj1 = getObjBySanitizedID(sourceId);
+        var obj2 = main(movingToSelector);
+        if (main.IsHTMLCollection(obj1))
+        {
+            console.error("Error: Source must be a single selectable object.");
+        }
+
+        var result = obj1.innerHTML;
+        main.Empty(obj1);
+        executeCollectionOrSingleTask(obj2, function (item)
+        {
+            main.Empty(item);
+            item.innerHTML = result;
+        });
+    }
+
+    /**
+     * Gets all the child nodes of an element
+     * @memberOf rj
+     * @param {string} el The element (id, class)
+     * @param {string} selector The children to search for. E.g.: #id, .class, tag. E.g. #myTable, .myTable, or table
+     * @returns An array of child nodes
+     */
+    main.FindChildren = function (el, selector)
+    {
+        el = getObjectOrExecuteQuery(el);
+        return el.querySelectorAll(selector);
+    }
+
+    /**
+     * Find the parent of the selected node
+     * @memberOf rj
+     * @param {string} el The element (id, class)
+     * @param {string} selector Example: #id, .class, tag. E.g. #myTable, .myTable, or table
+     */
+    main.FindParent = function (el, selector)
+    {
+        var findById = selector[0] === "#";
+        var findByClass = selector[0] === ".";
+        var findByTag = !findById &amp;&amp; !findByClass;
+
+        while (el &amp;&amp; el.parentNode)
+        {
+            el = el.parentNode;
+
+            if (findById &amp;&amp; el.id &amp;&amp; el.id == selector.substring(1)) { return el; }
+            else if (findByClass &amp;&amp; el.classList &amp;&amp; el.classList.contains(selector.substring(1))) { return el; }
+            else if (findByTag &amp;&amp; el.tagName &amp;&amp; el.tagName.toLowerCase() == selector) { return el; }
+        }
+    }
+
+    // (Tip) Closest: built-in JS. element.closest(selector); Selectors example: "body > div", ":not(div)"
+    // (Tip) Siblings: node.nextElementSibling, node.previousElementSibling;
+
+    /**
+     * Show/Hide the target element(s)
+     * @memberOf rj
+     * @param {string} target selector (#id, .class, .etc)
+     * @param {string} isShow True: Show, False: Hide
+     * @param {bool} isAnimate Animate the show/hide or not
+     */
+    main.Show = function (target, isShow, isAnimate)
+    {
+        var obj = getObjectOrExecuteQuery(target);
+        executeCollectionOrSingleTask(obj, function (i)
+        {
+            if (isShow)
+            {
+                i.classList.remove('hidden');
+                if (isAnimate === true) { main.AnimateFadeIn(obj); }
+                else { i.style.display = 'block'; }
+            }
+            else
+            {
+                if (isAnimate === true) { main.AnimateFadeOut(obj); }
+                else { i.style.display = 'none'; }
+            }
+        });
+    }
+
+    /**
+     * Toggles the show/hide. If it's hidden, shows. If it's shown, hides.
+     * @memberOf rj
+     * @param {string} target selector (#id, .class, .etc)
+     * @param {string} isAnimate Animate the show/hide or not
+     */
+    main.ToggleShowHide = function (target, isAnimate)
+    {
+        var obj = getObjectOrExecuteQuery(target);
+        var isHidden = obj.style.display === 'none' || obj.classList.contains('hidden');
+        main.Show(obj, isHidden, isAnimate);
+    }
+
+    /**
+     * Prevents firing an event too many times depending on the wait
+     * Gotten from: http://underscorejs.org/docs/underscore.html
+     * @memberOf rj
+     * @param {function} func the function to run
+     * @param {number} wait the delay time before allowing it to run again
+     * @param {object} options Please check the link above for more info
+     */
+    main.Throttle = function (func, wait, options)
+    {
+        var context, args, result;
+        var timeout = null;
+        var previous = 0;
+        if (!options) options = {};
+        var later = function ()
+        {
+            previous = options.leading === false ? 0 : new Date().getTime();
+            timeout = null;
+            result = func.apply(context, args);
+            if (!timeout) context = args = null;
+        };
+        return function ()
+        {
+            var now = new Date().getTime();
+            if (!previous &amp;&amp; options.leading === false) previous = now;
+            var remaining = wait - (now - previous);
+            context = this;
+            args = arguments;
+            if (remaining &lt;= 0 || remaining > wait)
+            {
+                if (timeout)
+                {
+                    clearTimeout(timeout);
+                    timeout = null;
+                }
+                previous = now;
+                result = func.apply(context, args);
+                if (!timeout) context = args = null;
+            } else if (!timeout &amp;&amp; options.trailing !== false)
+            {
+                timeout = setTimeout(later, remaining);
+            }
+            return result;
+        };
+    };
+
+    // String Functions
+    /**
+     * Check if string 1 equals to string 2 (case-insensitive).
+     * @memberOf rj
+     * @param {string} str1 first string
+     * @param {string} str2 second stirng
+     */
+    main.StringEquals = function (str1, str2) { return String(str1).toLowerCase() === String(str2).toLowerCase(); }
+
+    /**
+     * Check if the term string contains in the full string
+     * @memberOf rj
+     * @param {string} full the full string
+     * @param {string} term the term to search for
+     */
+    main.StringContains = function (full, term) { return full.toLowerCase().indexOf(term.toLowerCase()) >= 0; }
+    
+    /**
+     * Similar to String.Format in C#. Usage: rj.StringFormat("CarMake: {0} {1}", "Nissan", "Sentra") would return "CarMake: Nissan Sentra"
+     * @memberOf rj
+     * @param {string} str The base string to pass in. Make sure to add arguments as well. Please look at example usage.
+     * @returns {string} The formatted string
+     */
+    main.StringFormat = function (str)
+    {
+        for (var i = 1; i &lt; arguments.length; i++)
+        {
+            var reg = new RegExp("\\{" + (i - 1) + "\\}", "gm");
+            str = str.replace(reg, arguments[i]);
+        }
+        return str;
+    };
+
+    // This is for Case Insensitive purpose. Better to use built-in str.replace('old', 'new');
+    /**
+     * Replaces all strings from string1 to string2.
+     * @memberOf rj
+     * @example rj.ReplaceAll("TestFooBar", "Test") would return "FooBar".
+     * @param {string} str1 the full string
+     * @param {string} str2 the string to replace with
+     * @param {any} ignore
+     */
+    main.ReplaceAll = function (str1, str2, ignore)
+    {
+        return this.replace(new RegExp(str1.replace(/([\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\&lt;\>\-\&amp;])/g, function (c) { return "\\" + c; }), "g" + (ignore ? "i" : "")), str2);
+    };
+    
+    /**
+     * Returns number in comma format. For example, 1000000 turns to 1,000,000
+     * @memberOf rj
+     * @param {any} num
+     */
+    main.CommaFormat = function (num) { return Number(num).toLocaleString('en'); }
+
+    // Arrays
+    main.IsHTMLCollection = function (obj) { return obj.constructor === HTMLCollection; }
+    main.IsArray = function (obj) { return obj.constructor === Array; }
+    main.ArrayContains = function (a, obj)
+    {
+        var i = a.length;
+        while (i--)
+        {
+            if (a[i] === obj)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Check is the passed value is valid (aka not null or empty string)
+     * @memberOf rj
+     * @param {string} str The value to check
+     */
+    main.IsValidValue = function (str)
+    {
+        return ((str != null &amp;&amp; str.length > 0 &amp;&amp; str !== 'undefined') || (str === true || str === false));
+    }
+
+    /**
+     * Check if the passed in object or object id ("#id") is valid (aka not null)
+     * @memberOf rj
+     * @param {any} target the selector ("#id") or the passed in object
+     */
+    main.IsValidElement = function (target)
+    {
+        var obj = main.IsObject(target) ? target : getObjBySanitizedID(target);
+        return (id !== null &amp;&amp; id !== undefined &amp;&amp; id.length > 0);
+    }
+    
+    /**
+     * Similar to Url.Action in ASP .NET MVC/.Core.
+     * @memberOf rj
+     * @example rj.UrlAction("Index", "Main", { id: 5 }) returns "/Main/Index?id=5"
+     * @param {string} action The name of the Action you are calling
+     * @param {string} controller The name of the Controller you are calling
+     * @param {object} params An object containing parameters
+     */
+    main.UrlAction = function (action, controller, params)
+    {
+        var str = "";
+        if (params)
+        {
+            for (var key in params)
+            {
+                if (str !== "") { str += "&amp;"; } // Add &amp; at the beginning of a parameter.
+                str += key + "=" + encodeURIComponent(params[key]);
+            }
+            return "/" + controller + "/" + action + "?" + str;
+        }
+
+        if (controller == null || controller == "undefined") { return "/" + action; }
+        return "/" + controller + "/" + action;
+    }
+
+    // *** Input item manipulation. You can call them using &lt;input onchange="rj.InputFilterDecimal(this)">
+
+    /**
+     * Only allow numbers on inputs.
+     * @memberOf rj
+     * @example &lt;input onchange="rj.InputFilterDecimal(this)">
+     * @param {any} obj The input object. Use "this".
+     */
+    main.InputFilterDecimal = function (obj) { obj.value = obj.value.replace(/[^0-9.]/g, ""); }
+
+    // *** Select List function: Add/Populate, Get/View, Delete, Contains
+
+    /**
+     * Add an item to the select list
+     * @memberOf rj
+     * @param {string} query the selector of the select list
+     * @param {string} text the text of the item to add
+     * @param {string} value the value of the item to add
+     */
+    main.AddSelectListItem = function (query, text, value) { main.AppendHTML(query, main.StringFormat('&lt;option value="{1}">{0}&lt;/option>', text, value), 'beforeend'); }
+
+    main.GetSelectListValue = function (query) { var selectList = getObjectOrExecuteQuery(query); return selectList[selectList.selectedIndex].value; }
+    main.GetSelectListText = function (query) { var selectList = getObjectOrExecuteQuery(query); return selectList[selectList.selectedIndex].innerHTML; }
+
+    /**
+     * Delete an item from th select list based on the value.
+     * @memberOf rj
+     * @param {string} query the selector of the select list
+     * @param {string} value the value to find and delete
+     */
+    main.DeleteSelctListItem = function (query, value)
+    {
+        var selectList = getObjectOrExecuteQuery(query, value);
+        for (var i = 0; i &lt; selectList.length; i++)
+        {
+            if (selectList.options[i].value === value) { selectList.remove(i); }
+        }
+    }
+
+    /**
+     * Clears a select list
+     * @memberOf rj
+     * @param {string} query the selector of the select list
+     */
+    main.ClearSelectList = function (query)
+    {
+        var selectList = getObjectOrExecuteQuery(query);
+        while (selectList.options.length > 0) { selectList.remove(0); }
+    }
+
+    /**
+     * Populate a select list item with results.
+     * @memberOf rj
+     * @param {string} query selector for the select list
+     * @param {object} result Should be a json object that was Text and Value property. 
+     * @param {bool} clearList specify wether to CLEAR the list first or APPEND to the list.
+     */
+    main.PopulateSelectList = function (query, result, clearList)
+    {
+        var list = getObjectOrExecuteQuery(query);
+        if (clearList === true) { main.ClearSelectList(list); }
+
+        main.ForEach(result, function (item) { main.AddSelectListItem(list, item.Text, item.Value); });
+    }
+
+    /**
+     * Check if the select list contains a value
+     * @memberOf rj
+     * @param {string} query selector for the select list
+     * @param {string} value pass in the value or text to search for
+     * @param {string} text pass in the value or text to search for
+     */
+    main.SelectListContains = function (query, value, text)
+    {
+        var list = getObjectOrExecuteQuery(query);
+        var found = false;
+        rj.ForEach(list.options, function (item)
+        {
+            if (!found)
+            {
+                if (item.value === value.toString()) { found = true; }
+                if (item.innerHTML === text) { found = true; }
+            }
+        });
+        return found;
+    }
+
+    /**
+     * Replace node &lt;script> with the executable version. javascript.innerHTML = "&lt;script>...&lt;/>" does not execute the scripts.
+     * @param {any} node the script node
+     */
+    main.NodeScriptReload = function (node)
+    {
+        function isNodeScript(node) { return node.tagName === 'SCRIPT'; }
+        function nodeScriptClone(node)
+        {
+            var script = document.createElement("script");
+            script.text = node.innerHTML;
+            for (var i = node.attributes.length - 1; i >= 0; i--)
+            {
+                script.setAttribute(node.attributes[i].name, node.attributes[i].value);
+            }
+            return script;
+        }
+
+        if (isNodeScript(node) === true)
+        {
+            node.parentNode.replaceChild(nodeScriptClone(node), node);
+        }
+        else
+        {
+            var i = 0;
+            var children = node.childNodes;
+            while (i &lt; children.length)
+            {
+                main.NodeScriptReload(children[i++]);
+            }
+        }
+
+        return node;
+    }
+
+    /**
+     * Loads a Javascript file, and then executes the callback function when loading is completed.
+     * @memberOf rj
+     * @param {string} src the path to javascript file
+     * @param {function} callback the callback function to run after js file loaded.
+     */
+    main.LoadJS = function (src, callback)
+    {
+        var js = document.createElement('script');
+        js.src = src;
+        js.onload = function ()
+        {
+            if (isFunction(callback)) { callback(); };
+        };
+        document.head.appendChild(js);
+    }
+
+    /**
+     * Returns if the current browser is IE or EDGE.
+     * @memberOf rj
+     */
+    main.IsIEorEdge = function ()
+    {
+        return (navigator.userAgent.indexOf("MSIE ") > -1 || navigator.userAgent.indexOf("Trident/") > -1 || navigator.userAgent.indexOf("Edge/") > -1);
+    }
+    //#endregion Miscellaneous
+
+    //#region Animation
+    /**
+     * Fade in animation
+     * @memberOf rj
+     * @param {any} obj The object to animate. 
+     * @param {number} duration The duration of the animation.
+     */
+    main.AnimateFadeOut = function (obj, duration)
+    {
+        obj = getObjectOrExecuteQuery(obj);
+        executeCollectionOrSingleTask(obj, function ()
+        {
+            var op = 1;  // initial opacity
+            if (duration == null) { duration = 20; }
+
+            var timer = setInterval(function ()
+            {
+                if (op &lt;= 0.1)
+                {
+                    clearInterval(timer);
+                    obj.style.display = 'none';
+                }
+                obj.style.opacity = op;
+                obj.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op -= op * 0.1;
+            }, duration);
+        });
+    }
+
+    /**
+     * Fade out animation
+     * @memberOf rj
+     * @param {any} obj The object to animate. 
+     * @param {number} duration The duration of the animation.
+     */
+    main.AnimateFadeIn = function (obj, duration)
+    {
+        obj = getObjectOrExecuteQuery(obj);
+        executeCollectionOrSingleTask(obj, function ()
+        {
+            var op = 0.1;
+            obj.style.display = 'block';
+            if (duration == null) { duration = 20; }
+
+            var timer = setInterval(function ()
+            {
+                if (op >= 1) { clearInterval(timer); }
+
+                obj.style.opacity = op;
+                obj.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.1;
+            }, duration);
+        });
+    }
+
+    //#endregion
+
+    // #region Unobtrusive Functions
+
+    // Example on how to use below. Just create one instance and add your global listeners there. (Create global click listener)
+    // document.addEventListener('click', function(e) { if (e.target.hasAttribute('data-loadpartial')) { rj.UnobtrusiveLoadPartial(e.target); } });
+    
+    /**
+     * &lt;pre>
+     * Loads a url to a specific target if the node has "data-loadpartial" attribute. 
+     * Fore example: "&lt;a href='javascript:void(0)' data-loadpartial data-url='www.urlToLoad.com' data-targetid='urlResult' data-success='methodToCallAfterSuccess'>Load URL Result&lt;/a>
+     * Targets "data-loadpartial". Loads url content into desired target Id.
+     * data-url: the url to load the partial,
+     * data-targetid: the target id to load in results to.
+     * data-params: the parameters (if any). Must be in string format. E.g. "id=10&amp;lastName=Tester"
+     * data-success: the name of the success function to call. E.g. "editFormLoadSucceeded"
+     * data-error: the name of the error function to call. E.g. "editFormLoadFailed"
+     * (todo):  data-loadingdiv: the div to show/hide when loading.
+     * Can also call functions from other libraries. For example "app.methodToCall". Use a period to seperate. (library.method)
+     * &lt;/pre>
+     * @memberOf rj
+     * @param {any} target the target to listen to. Activate it using: document.addEventListener('click', function(e) { if (e.target.hasAttribute('data-loadpartial')) { rj.UnobtrusiveLoadPartial(e.target); } });
+     */
+    main.UnobtrusiveLoadPartial = function (target)
+    {
+        var url = target.getAttribute('data-url');
+        var targetId = target.getAttribute('data-targetid');
+        if (target.hasAttribute('data-params')) { url = url + "?" + target.getAttribute('data-params'); }
+        
+        return main.AsyncLoad(targetId, url, null, null).then(function ()
+        {
+            var successFuncToCall = generateUnobtrusiveFunction(target.getAttribute('data-success'));
+            if (isFunction(successFuncToCall)) { successFuncToCall(); }
+        }).catch(function (ex)
+        {
+            console.error(ex);
+            var errorFuncToCall = generateUnobtrusiveFunction(target.getAttribute('data-error'));
+            if (isFunction(errorFuncToCall)) { errorFuncToCall(); }
+        });
+    }
+
+    main.GenerateUnobtrusiveFunction = generateUnobtrusiveFunction;
+    function generateUnobtrusiveFunction(funcString)
+    {
+        if (!rj.IsValidValue(funcString)) { return null; }
+
+        if (rj.StringContains(funcString, "."))
+        {
+            var funcStringArray = funcString.split(".");
+            var library = window[funcStringArray[0]];
+            return library[funcStringArray[1]];
+        }
+        else
+        {
+            return window[funcString];
+        }
+    }
+
+    // #endregion (Unobtrusive Functions)
+
+    return main;
+})();</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated at Mon Mar 19 2018 02:44:16 GMT-0700 (US Mountain Standard Time)
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
